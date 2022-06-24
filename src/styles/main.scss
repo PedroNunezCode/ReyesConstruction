@@ -1,10 +1,24 @@
+@import "./shared/Navbar";
+
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 }
 
-.align-center{
+html{
+	font-size: 16px;
+}
+
+.app-container{
+	// height: 110vh;
+	// width: 100vw;
+	// background: url("/public/assets/images/projects/Project1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.align-center {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;

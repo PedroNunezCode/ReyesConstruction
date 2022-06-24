@@ -1,16 +1,20 @@
 import React from 'react';
-import SampleComponent from './components/SampleComponent';
 import NotFound from './components/shared/NotFound';
+import Navbar from './components/shared/Navbar';
+import HomePage from './pages/HomePage';
 
-import { BrowserRouter as Router, Routes, Route, Switch  } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export default function App() {
 	return (
-		<Router>
-			<Routes>
-				<Route exact path="/" element={<SampleComponent />} />
-				<Route path="*" element={<NotFound />} />
-			</Routes>
-		</Router>
+		<div className='app-container'>
+			<Router>
+			<Navbar />
+				<Routes>
+					<Route path="/" element={<HomePage/>} />
+					<Route path="*" element={<NotFound />} />
+				</Routes>
+			</Router>
+		</div>
 	)
 }
